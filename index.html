@@ -7,30 +7,43 @@
   <title>jQuery</title>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript">
-    
+  <script src="/jquery/js/jquery.js"></script>  
     
   $(function(){
     $("#toggle").on("click",function(){
       $("#target").fadeToggle("slow");
       });
-    });
-    
+    });  
    </script>
     
-  <script src="/jquery/js/jquery.js"></script>
     <script>
     $(document).ready(function(){    
     $(document).bind("click", function (e) {
       $(e.target).closest("li").toggleClass("hilight");
     });
-
+  });  
+  </script>
+  
+  <script>
+  $(document).ready(function(){  
+    $(document.body).click(function () {
+      if ($("div:first").is(":hidden")) {
+        $("div").slideDown("slow");
+      } else {
+        $("div").hide();
+      }
+    });
   });
-    
-    </script>
+  </script>
   
   <style>
   li { margin: 3px; padding: 3px; background: #EEEEEE; }
   li.hilight { background: yellow; }
+  </style>
+  
+  <style>
+  div { background:#de9a44; margin:3px; width:80px; 
+        height:40px; display:none; float:left; }
   </style>
   
    </head>
@@ -41,6 +54,12 @@
    <ul>
     <li><b>ここをクリックすると黄色くなります</b></li>
    </ul>
+     
+       クリックすると箱が出る
+  <div></div>
+
+  <div></div>
+  <div></div>
      
    </body>
    </html>
