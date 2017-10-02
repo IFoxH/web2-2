@@ -25,27 +25,11 @@
   });  
   </script>
   
-  <script>
-  $(document).ready(function(){  
-    $(document.body).click(function () {
-      if ($("div:first").is(":hidden")) {
-        $("div").slideDown("slow");
-      } else {
-        $("div").hide();
-      }
-    });
-  });
-  </script>
-  
   <style>
   li { margin: 3px; padding: 3px; background: #EEEEEE; }
   li.hilight { background: yellow; }
   </style>
   
-  <style>
-  div { background:#de9a44; margin:3px; width:80px; 
-        height:40px; display:none; float:left; }
-  </style>
   
    </head>
    <body>
@@ -53,14 +37,8 @@
      <button id="toggle">切り替え</button>
      
    <ul>
-    <li><b>ここをクリックすると黄色くなります</b></li>
+    <li><b>ここをクリックすると黄色くなる</b></li>
    </ul>
-     
-       クリックすると箱が出る
-  <div></div>
 
-  <div></div>
-  <div></div>
-     
    </body>
    </html>
