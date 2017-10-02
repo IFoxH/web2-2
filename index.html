@@ -5,16 +5,39 @@
   <title>jQuery</title>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript">
+    <script src="/jquery/js/jquery.js"></script>
+    
+    
   $(function(){
     $("#toggle").on("click",function(){
       $("#target").fadeToggle("slow");
       });
     });
     
+    
+    $(document).ready(function(){    
+    $(document).bind("click", function (e) {
+      $(e.target).closest("li").toggleClass("hilight");
+    });
+
+  });
+    
     </script>
+  
+  <style>
+  li { margin: 3px; padding: 3px; background: #EEEEEE; }
+  li.hilight { background: yellow; }
+  </style>
+  
    </head>
    <body>
     <div id="target">表示・非表示させる要素</div>
      <button id="toggle">切り替え</button>
+     
+   <ul>
+    <li><b>ここをクリックすると黄色くなります</b></li>
+    <li>bタグの外でも <b>内側でも</b> クリック結果は同じになる</li>
+   </ul>
+     
    </body>
    </html>
